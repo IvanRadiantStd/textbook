@@ -1,0 +1,161 @@
+@import "bourbon"
+@import "vars.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+
+
+//ALWAYS END
+@import "media"
+
+//Load Libs SASS
+//@import "app/libs/animate/animate.sass"
+
+
+.content
+	.wrapper
+		margin-top: -18px
+		position: relative
+		z-index: 1	
+		.inner-body
+			background-color: #FFF
+			padding: 0
+			display: table
+			width: 100%
+			padding: 25px
+			.left-sidebar,
+			.lection-window
+				display: table-cell
+				vertical-align: top
+			.left-sidebar
+				width: 332px
+				padding-right: 25px
+				ul
+					li
+						.course
+							display: table
+							width: 100%
+							border-bottom: 1px solid #bebebe
+							cursor: pointer
+							padding: 15px 0
+							transition: background-color .5s ease
+							position: relative
+							&:hover
+								text-decoration: underline
+							.arrow-wrap
+								text-align: left
+								.arrow
+									width: 15px
+									height: 6px
+									background-image: url(../img/arrow.png)
+									background-repeat: no-repeat
+									margin-top: 1px
+									display: inline-block
+									transition:  transform .5s ease
+							h4
+								text-transform: uppercase
+							.arrow-wrap,
+							h4
+								display: table-cell
+								vertical-align: middle
+							&.active
+								border-bottom: 1px solid transparent
+								margin-bottom: 2px
+								.arrow-wrap
+									text-align: left
+									.arrow
+										transform: rotate(180deg)
+					
+						.subject
+							display: none
+							table
+								th
+									padding: 18px 15px
+									padding-top: 0
+									h3
+										cursor: pointer
+										&:hover
+											text-decoration: underline
+								td
+									padding: 5px 15px 30px 15px
+									display: none
+									max-height: 400px
+									overflow-y: scroll
+								&.active
+									border: 1px solid #787878
+									margin-bottom: 10px
+									th
+										font-weight: normal
+										padding: 18px 15px
+										background-image: url(../img/subject-bg.png)
+										background-size: cover
+									td
+										display: block
+						&:last-child
+							.course
+								border-bottom: none
+
+.lection-window
+	h2
+		font-size: 40px
+		font-family: "AkrobatRegular",sans-serif
+		line-height: 40px
+
+.main-footer
+	.copyright
+		margin-top: 9px
+		p
+			font-size: 12px
+			font-family: "RobotoLight",sans-serif
+			line-height: 12px
+			padding: 0
+			margin: 0
+			color: #fff
+	.footer-logo-wrap
+		text-align: center
+		color: #000
+		p
+			font-size: 18px
+			line-height: 24px
+			font-family: "RobotoLight",sans-serif
+	.foot-nav
+		margin-top: 30px
+		text-align: center
+		ul
+			display: inline-block
+			padding: 0 50px
+			padding-top: 7px
+			border-top: 1px solid #585858
+			li
+				float: left
+				margin-right: 40px
+				&:last-child
+					margin-right: 0
+				a
+					font-family: "AkrobatLight",sans-serif
+					font-size: 18px
+					line-height: 18px
+					color: #585858
+					+kerning(1.2)
